@@ -14,6 +14,10 @@
 ## 0. Agent rules
 <!-- 15-30 lines. The only always-relevant part. -->
 ### Role
+### Recommended skills
+<!-- Workflow skills that pair with this knowledge file. Default suggestion: Anthropic's official
+customer-support plugin (ticket-triage, draft-response, customer-escalation, kb-article,
+customer-research), with a table: skill | use it for | which § it pairs with. -->
 ### Tone & format
 ### Scope: what we help with / what we don't
 ### Never

@@ -74,6 +74,10 @@ Use `template.md`. Rules:
 
 - **Agent rules go first** and stay short: tone, scope, what never to promise,
   escalation triggers, what to collect. Reference material comes after.
+- **Recommend workflow skills in §0.** This file is product knowledge; triage,
+  drafting and escalation come from skills. Default to Anthropic's official
+  `customer-support` plugin (ticket-triage, draft-response, customer-escalation,
+  kb-article, customer-research). Map each skill to the sections it should read.
 - **Static before volatile.** Product facts, policies and playbooks at the top;
   current version, open known issues, promotions and stale-doc warnings in the
   final "Volatile facts" section with an "as of" date. This keeps prompt caching

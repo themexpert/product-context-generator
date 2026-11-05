@@ -1,5 +1,15 @@
 # Changelog
 
+## 0.2.2 (2026-11-05)
+
+- Generated files now recommend workflow plugins with exact install commands.
+  - §0 has a skills table.
+  - §16 has a Setup block.
+  - Recommended: Anthropic's Customer Support (required), Enterprise Search, and
+    Engineering for software teams, all from `anthropics/knowledge-work-plugins`.
+  - Partner plugins and connectors are listed only for tools the owner uses.
+- The questionnaire asks which helpdesk, chat and CRM tools the team uses.
+
 ## 0.2.1 (2026-11-05)
 
 - Shorter install name: `claude plugin install product-context@themexpert`. The plugin is

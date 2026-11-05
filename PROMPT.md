@@ -61,7 +61,12 @@ problems, billing, refunds and returns, escalation and feature requests **withou
    - 13 Feature requests (never promise)
    - 14 Reply templates
    - 15 Volatile facts, dated: current version, open issues, outdated docs not to cite
-   - 16 Links
+   - 16 Links, ending with a "Setup" block. It recommends Anthropic's Customer
+     Support plugin (required) and Enterprise Search plugin (recommended), plus
+     connectors only for tools I use. In Claude Code, install them with
+     `claude plugin marketplace add anthropics/knowledge-work-plugins`, then
+     `claude plugin install customer-support@knowledge-work-plugins`. In Claude.ai,
+     use Settings → Plugins.
 5. **Rules for the file.**
    - The header includes `Status: ready` or `Status: draft: <reason>`, and what the
      playbook was built from.

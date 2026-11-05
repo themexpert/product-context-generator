@@ -82,10 +82,18 @@ Skip anything a reliable source already answered.
 Use `template.md` and the variants for the product type.
 
 - **§0 Agent rules first, at most 60 lines.** Bullets only. Reference material goes later.
-- **Recommend workflow skills in §0** with a table of at most 5 rows. This file holds
-  product knowledge; triage, drafting and escalation come from skills. Default to
-  Anthropic's official `customer-support` plugin (ticket-triage, draft-response,
-  customer-escalation, kb-article, customer-research).
+- **Recommend workflow plugins.** This file holds product knowledge; triage, drafting
+  and escalation come from plugins.
+  - In §0, add a skills table of at most 7 rows: skill, use, which § it pairs with.
+  - In §16, add a "Setup" block with the exact install commands.
+  - Defaults, all in Anthropic's `knowledge-work-plugins` marketplace:
+    - `customer-support` (required): ticket-triage, draft-response, customer-escalation,
+      customer-research, kb-article.
+    - `enterprise-search` (recommended): its `search` skill finds earlier answers.
+    - `engineering` (for software teams): its `debug` skill reproduces bugs before
+      escalation.
+  - Add a partner plugin or connector only for a tool the owner actually uses
+    (Intercom, HubSpot, Slack, Gmail, Notion, Atlassian, Guru).
 - **Match the reply mode.**
   - Draft mode: §0 tells the agent to open each draft with a one-line note for the
     reviewer, and to flag `ESCALATE:` when a human must act, not just approve.

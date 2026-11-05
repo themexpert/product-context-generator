@@ -17,9 +17,11 @@
 ### Role
 <!-- Who you answer, on which channels, and whether you reply directly or draft for a human.
 Draft mode: start each draft with a one-line note for the reviewer, and flag `ESCALATE:` when a human must act, not only approve. -->
-### Recommended skills
-<!-- At most 5 rows: skill | use it for | pairs with §. Default: Anthropic's customer-support plugin
-(ticket-triage, draft-response, customer-escalation, kb-article, customer-research). -->
+### Recommended plugins and skills
+<!-- One line: "This file is the product knowledge; these plugins are the workflow. Use them together.
+Install commands: §16 Setup." Then at most 7 rows: skill | use it for | pairs with §.
+Defaults: customer-support:ticket-triage, :draft-response, :customer-escalation, :customer-research,
+:kb-article; enterprise-search:search; engineering:debug (software, internal). -->
 ### Tone & format
 ### Scope: what we help with / what we don't
 <!-- If editions get different support (paid gets email, free or self-hosted gets community only), say how to route each. -->
@@ -82,6 +84,18 @@ Include exact error strings. Note silent failures and where the truth hides. -->
 
 ## 16. Links
 <!-- Website, pricing, docs, support, refund policy, changelog, status page, downloads. -->
+
+### Setup: plugins for the support agent
+<!-- For the humans who install the agent. Keep the commands exact:
+Claude Code:
+  claude plugin marketplace add anthropics/knowledge-work-plugins
+  claude plugin install customer-support@knowledge-work-plugins     # required
+  claude plugin install enterprise-search@knowledge-work-plugins    # recommended
+  claude plugin install engineering@knowledge-work-plugins          # software teams
+(In a session, the same commands start with /plugin.)
+Claude.ai or Cowork: Settings → Plugins → add Customer Support, then Enterprise Search.
+Connectors and partner plugins: list only the tools the owner uses (e.g. intercom@knowledge-work-plugins).
+Last line: load this file as the agent's project or system context. -->
 
 ---
 

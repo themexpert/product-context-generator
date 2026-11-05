@@ -2,7 +2,7 @@
   "name": "product-context",
   "displayName": "Product Context Generator",
   "description": "Research a product's site, docs, code and tickets, interview the owner for the gaps, and generate a support-grade <product>_context.md that AI customer-support agents can rely on. Works for software, SaaS and hardware.",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "author": {
     "name": "ThemeXpert",
     "url": "https://www.themexpert.com"

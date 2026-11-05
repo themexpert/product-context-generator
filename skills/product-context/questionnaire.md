@@ -32,6 +32,8 @@ software), C (SaaS), H (hardware).
 - May the agent ask for access (admin login, dashboard invite, device serial)? Through
   which channel is that safe? ★
 - Tone, languages, sign-off, and words or claims to avoid.
+- Which helpdesk, chat, CRM and docs tools does the team use (Intercom, Zendesk, HubSpot,
+  Slack, Gmail, Notion, Jira)? This picks the plugins and connectors in §0 and §16.
 
 ### D. Concepts → §5
 - The product's own nouns: what customers see vs what the team calls them.

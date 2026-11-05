@@ -125,11 +125,19 @@ needs `bash` and `perl`, which ship with macOS, Linux and Git for Windows.
 
 - **Claude Code or other agents:** reference it from `CLAUDE.md` or `AGENTS.md` (for
   example `@yourproduct_context.md`), or load it as your support bot's system prompt.
-- **Pair it with workflow skills,** for example Anthropic's official
-  [`customer-support`](https://github.com/anthropics/knowledge-work-plugins) plugin
-  (`ticket-triage`, `draft-response`, `customer-escalation`, `kb-article`,
-  `customer-research`). Those skills supply the *workflow*; your context file supplies
-  the *product knowledge*.
+- **Pair it with workflow plugins.** Your context file supplies the *product knowledge*;
+  these plugins supply the *workflow*. The generated file lists them in §0, with install
+  commands in §16:
+
+  ```bash
+  claude plugin marketplace add anthropics/knowledge-work-plugins
+  claude plugin install customer-support@knowledge-work-plugins     # triage, drafts, escalation, KB articles
+  claude plugin install enterprise-search@knowledge-work-plugins    # find earlier answers in email, chat, docs
+  claude plugin install engineering@knowledge-work-plugins          # debug bugs before escalating (software)
+  ```
+
+  In Claude.ai or Cowork, add **Customer Support** and **Enterprise Search** from
+  Settings → Plugins. Add partner plugins such as Intercom only for tools you use.
 - **Refresh it.** Update §15 on every release. Say "refresh the context file" to re-check
   everything that changes.
 

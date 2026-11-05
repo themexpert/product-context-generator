@@ -1,0 +1,13 @@
+name: ci
+on: [push, pull_request]
+jobs:
+  lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Shellcheck
+        run: shellcheck -S warning skills/product-context/scripts/check-context.sh tests/run.sh
+      - name: Lint regression tests and examples
+        run: bash tests/run.sh
+      - name: Manifests are valid JSON
+        run: for f in .claude-plugin/*.json; do python3 -m json.tool "$f" > /dev/null || exit 1; done

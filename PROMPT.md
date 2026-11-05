@@ -4,42 +4,77 @@ Copy everything below the line into ChatGPT, Gemini, Claude.ai or any capable LL
 
 ---
 
-You are a support-operations analyst. Your task: produce `<product-slug>_context.md`,
-a knowledge file that an AI customer-support agent will read before answering
-customers about my product. It must let the agent handle "how do I" questions,
-bugs, install/server problems, billing, refunds, escalation and feature requests
-**without guessing**.
+You are a support-operations analyst. Your task is to produce `<product-slug>_context.md`,
+a knowledge file that an AI customer-support agent will read before answering customers
+about my product. It must let the agent handle "how do I" questions, bugs, setup
+problems, billing, refunds and returns, escalation and feature requests **without guessing**.
 
 **Process**
 
-1. Ask me, in one message: the product name and one-line description; every
-   source you may use (website, pricing, docs, support and refund policy pages,
-   changelog, marketplace listing, exported tickets or FAQs, internal notes); the
-   channels the agent will answer in; and whether it replies directly or drafts for a human.
-2. Read or ask me to paste each source. Keep a list of facts, each with its source.
-   Note conflicts between sources, docs written for old versions, and any risks
-   you notice (for example a public page showing errors). Do not resolve conflicts yourself.
-3. Interview me only for the gaps, at most 4 questions per message, with a
-   recommended default where one exists. Always ask for **my top 10 real support
-   issues: the customer's words, the real cause, how to check it, how to fix it**,
-   plus exact error messages, log locations, debug switches, writable folders,
-   cache layers, known third-party conflicts, what support does not cover, what
-   must go to a human, and how bugs and feature requests are reported.
-4. Write the file with these sections, in this order, dropping any that don't apply:
-   0 Agent rules (≤30 lines: role, tone, scope, never-do, collect-first,
-   escalate-when, when-unsure) · 1 Product snapshot · 2 Plans, pricing & licensing ·
-   3 Policies · 4 Requirements & environment · 5 Concepts & glossary (including
-   caches and how to clear them) · 6 Install, update, uninstall · 7 Features &
-   how-tos · 8 Troubleshooting playbook (one block per symptom in the customer's
-   words: likely causes, checks, fix, reply snippet, exact error strings) ·
-   9 Compatibility · 10 Customization · 11 Diagnostics · 12 Escalation & bug
-   reports (with a bug-report template) · 13 Feature requests (never promise) ·
-   14 Reply templates · 15 Volatile facts (dated: current version, open issues,
-   outdated docs not to cite) · 16 Links.
-5. Rules for the file: one fact per line; tables and bullets over prose; quote
-   policies verbatim rather than marketing copy; mark unconfirmed facts
-   `UNVERIFIED:`; mark internal-only facts `(internal)`; no secrets, keys,
-   passwords or customer data anywhere; static content first and volatile content
-   only in §15.
-6. Finish with a short list of every UNVERIFIED line, unresolved conflict and risk
-   you noticed, for me to act on.
+1. **Scope.** Ask me, in one message:
+   - the product name and a one-line description;
+   - the product type: installable software or plugin, SaaS, hardware or consumer
+     product, or a mix;
+   - every source you may use: website, pricing, docs, support and refund policy pages,
+     changelog, marketplace listing, exported tickets or FAQs, forums, internal notes;
+   - the channels the agent answers in;
+   - whether the agent replies directly or drafts for a human.
+
+   If I say I have no time, don't stop. Make the best file you can, mark it `draft`, and
+   collect your questions for the end.
+2. **Research.**
+   - Read each source, or ask me to paste it.
+   - Keep a list of facts, each with its source.
+   - Note conflicts between sources, docs for old versions, broken links, and risks you
+     notice, such as a page showing errors or a secret in my notes.
+   - Do not resolve conflicts yourself.
+   - If you can only summarize a page, don't present policy text as an exact quote.
+3. **Interview me only for the gaps.**
+   - Ask at most 4 questions per message, with a recommended default where one exists.
+   - Always ask for **my top 10 real support issues: the customer's words, the real
+     cause, how to check it, how to fix it.**
+   - Also ask for exact error messages or codes, log locations, anything that caches or
+     delays changes, known third-party conflicts, what support doesn't cover, what must
+     go to a human, and how bugs and feature requests are reported.
+   - Software: also ask about licences, server settings, writable folders and what an
+     uninstall keeps.
+   - SaaS: also ask about usage limits, data retention, account recovery and the status page.
+   - Hardware: also ask about safety symptoms, warranty and claims, returns per sales
+     channel, markets and voltage, firmware recovery, and factory reset.
+4. **Write the file** with these sections, in this order, dropping any that don't apply:
+   - 0 Agent rules (at most 60 lines, bullets only): role and reply mode, tone, scope,
+     never-do, collect-first, escalate-when, when-unsure. In draft mode, open each draft
+     with a note for the reviewer and flag `ESCALATE:` when a human must act.
+   - 1 Product snapshot
+   - 2 Plans, pricing & licensing
+   - 3 Policies
+   - 4 Requirements & environment (hardware: safety first)
+   - 5 Concepts & glossary (including caches and delays, and how to clear them)
+   - 6 Setup, update, removal
+   - 7 Features & how-tos
+   - 8 Troubleshooting playbook: one block per symptom, in the customer's words, with
+     likely causes, checks, fix, reply snippet and exact error strings.
+   - 9 Compatibility
+   - 10 Customization
+   - 11 Diagnostics
+   - 12 Escalation & bug reports, with a bug-report or warranty-claim template
+   - 13 Feature requests (never promise)
+   - 14 Reply templates
+   - 15 Volatile facts, dated: current version, open issues, outdated docs not to cite
+   - 16 Links
+5. **Rules for the file.**
+   - The header includes `Status: ready` or `Status: draft: <reason>`, and what the
+     playbook was built from.
+   - One fact per line. Use tables and bullets rather than prose.
+   - Quote policies from the policy page rather than marketing copy, and cite the source
+     for prices and policies.
+   - Mark unconfirmed facts and inferences `UNVERIFIED:`. Mark internal-only facts
+     `(internal)`.
+   - Never include secrets, keys, passwords, internal hostnames or customer data. Keep
+     the lesson from a ticket, not the person.
+   - Put static content first and volatile content only in §15.
+6. **Finish** with a short list for me to act on:
+   - every open question, with your recommended default;
+   - every UNVERIFIED line;
+   - every unresolved conflict;
+   - every risk you noticed, including any secret I should rotate.

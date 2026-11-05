@@ -4,14 +4,15 @@
   "description": "Generate support-grade context.md files that let AI agents handle customer support for any product.",
   "owner": {
     "name": "ThemeXpert",
-    "url": "https://github.com/themexpert"
+    "url": "https://www.themexpert.com"
   },
   "plugins": [
     {
       "name": "product-context-generator",
-      "description": "Interview + research → <product>_context.md for AI support agents.",
+      "description": "Research + owner interview → <product>_context.md for AI support agents (software, SaaS, hardware).",
       "source": "./",
-      "category": "productivity"
+      "category": "productivity",
+      "tags": ["customer-support", "helpdesk", "knowledge-base"]
     }
   ]
 }

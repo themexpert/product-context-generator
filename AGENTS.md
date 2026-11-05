@@ -1,14 +1,22 @@
 # AGENTS.md
 
-This repo ships one skill: `skills/product-context/`. It generates a support-grade
+This repo ships one skill, `skills/product-context/`. It generates a support-grade
 `<product>_context.md` for AI customer-support agents.
 
-- Entry point: `skills/product-context/SKILL.md`. Follow its five steps in order.
-- Supporting files: `questionnaire.md` (interview), `template.md` (output shape),
-  `research.md` (source mining), `checklist.md` (quality gate).
-- Lint output with `scripts/check-context.sh <file> [allowed-email-domain]`.
-- Agents without a skill system: use `PROMPT.md`.
+- **Entry point:** `skills/product-context/SKILL.md`. Follow its steps in order.
+- **Supporting files:** `questionnaire.md` (the interview), `template.md` (output shape
+  and per-product-type variants), `research.md` (mining sources), `checklist.md`
+  (quality gate), and `scripts/check-context.sh` (the lint).
+- **Agents without a skill system:** use `PROMPT.md`.
 
-Conventions for changes here: keep SKILL.md under ~150 lines, keep template section
-numbers stable (the docs and lint script refer to them), and test any template
-change by generating `examples/acme-forms_context.md` again and linting it.
+## Changing this repo
+- Keep SKILL.md under ~200 lines.
+- Keep template section numbers stable. The docs, the lint and existing users' files
+  refer to them.
+- When you change the process in SKILL.md, update `PROMPT.md` to match.
+- Before you commit:
+  - `bash tests/run.sh` must pass.
+  - `claude plugin validate --strict .` must pass.
+- After behaviour changes, run `claude plugin eval . --allow-tools Write Bash`.
+- Examples and test fixtures use fictional products and obviously fake values
+  (`*.example` domains, `FAKE` tokens). Never commit a real key or a real person's email.

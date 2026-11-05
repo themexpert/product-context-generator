@@ -1,9 +1,11 @@
 # Acme Forms: Support Context
 
 > **For AI agents only. Not customer-facing.** Read §0 before every conversation.
-> Product version covered: 3.2.0 · Last verified: 2026-11-05 · Owner: Acme support lead
+> Covers: 3.2.0 · Last verified: 2026-11-05 · Owner: Acme support lead
+> Status: ready · Playbook built from: owner answers and 6 months of tickets
 > Sources: acmeforms.example/pricing, /refund-policy, /docs, plugin repo, owner interview
 > Lines marked `(internal)` are for your reasoning only. Never quote them to customers.
+> Lines marked `UNVERIFIED:` must be confirmed by a human before you state them as fact.
 > *This is a fictional example that shows the shape of a generated file.*
 
 ## Contents
@@ -46,7 +48,7 @@ Say you're checking, collect §11 diagnostics, then escalate with the §12 templ
 ## 2. Plans, pricing & licensing
 | Plan | Price | Sites |
 |---|---|---|
-| Pro | $49/yr | 1 |
+| Pro | $49/yr (source: acmeforms.example/pricing) | 1 |
 | Agency | $199/yr | Unlimited |
 - Expired license: forms keep working; updates and support stop.
 - Activation: Forms → License → paste the key from the account page. `localhost` and `*.test` don't use a slot.
@@ -58,7 +60,7 @@ Say you're checking, collect §11 diagnostics, then escalate with the §12 templ
 
 ## 3. Policies
 - Support: email 24h on weekdays (UTC). Chat Mon–Fri 09:00–17:00 UTC.
-- Refunds: "within 14 days if the product does not work as described". Approved by a human only.
+- Refunds: "within 14 days if the product does not work as described" (source: acmeforms.example/refund-policy). Approved by a human only.
 
 ## 4. Requirements & environment
 | Setting | Minimum | Symptom when too low |

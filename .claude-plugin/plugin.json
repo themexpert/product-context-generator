@@ -1,12 +1,15 @@
 {
   "name": "product-context-generator",
-  "description": "Interview a product owner, research their website, docs and code, and generate a support-grade <product>_context.md for AI customer-support agents.",
-  "version": "0.1.0",
+  "displayName": "Product Context Generator",
+  "description": "Research a product's site, docs, code and tickets, interview the owner for the gaps, and generate a support-grade <product>_context.md that AI customer-support agents can rely on. Works for software, SaaS and hardware.",
+  "version": "0.2.0",
   "author": {
     "name": "ThemeXpert",
-    "url": "https://github.com/themexpert"
+    "url": "https://www.themexpert.com"
   },
   "homepage": "https://github.com/themexpert/product-context-generator",
+  "repository": "https://github.com/themexpert/product-context-generator",
+  "supportUrl": "https://github.com/themexpert/product-context-generator/issues",
   "license": "MIT",
-  "keywords": ["customer-support", "context", "knowledge-base", "helpdesk", "skills"]
+  "keywords": ["customer-support", "helpdesk", "knowledge-base", "context", "support-bot", "skills"]
 }

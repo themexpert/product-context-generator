@@ -36,18 +36,18 @@ In a terminal:
 
 ```bash
 claude plugin marketplace add themexpert/product-context-generator
-claude plugin install product-context-generator@product-context-generator
+claude plugin install product-context@themexpert
 ```
 
 Or inside a Claude Code session:
 
 ```
 /plugin marketplace add themexpert/product-context-generator
-/plugin install product-context-generator@product-context-generator
+/plugin install product-context@themexpert
 ```
 
 Then say *"generate a support context file for my product"*, or run
-`/product-context-generator:product-context`.
+`/product-context:product-context`.
 
 ### Skill only (Claude Code or any Agent Skills runtime)
 

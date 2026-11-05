@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.2.1 (2026-11-05)
+
+- Shorter install name: `claude plugin install product-context@themexpert`. The plugin is
+  now `product-context`, and the marketplace is `themexpert`. If you installed 0.2.0 or
+  earlier, uninstall `product-context-generator@product-context-generator` first.
+
 ## 0.2.0 (2026-11-05)
 
 Tested by generating context files for a SaaS product, a WordPress plugin and a hardware

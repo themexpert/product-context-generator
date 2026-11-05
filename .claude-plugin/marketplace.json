@@ -1,18 +1,22 @@
 {
   "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
-  "name": "product-context-generator",
-  "description": "Generate support-grade context.md files that let AI agents handle customer support for any product.",
+  "name": "themexpert",
+  "description": "Claude Code plugins by ThemeXpert.",
   "owner": {
     "name": "ThemeXpert",
     "url": "https://www.themexpert.com"
   },
   "plugins": [
     {
-      "name": "product-context-generator",
+      "name": "product-context",
       "description": "Research + owner interview → <product>_context.md for AI support agents (software, SaaS, hardware).",
       "source": "./",
       "category": "productivity",
-      "tags": ["customer-support", "helpdesk", "knowledge-base"]
+      "tags": [
+        "customer-support",
+        "helpdesk",
+        "knowledge-base"
+      ]
     }
   ]
 }
